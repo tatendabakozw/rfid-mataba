@@ -36,7 +36,7 @@ function Forge() {
       })
       socket.emit("data_send", { code: address });
       
-    }, 2000);
+    }, 500);
   };
 
   console.log('code from state --- ', code);
