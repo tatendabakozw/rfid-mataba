@@ -4,8 +4,8 @@ import "./App.css";
 import socketIOClient from "socket.io-client";
 import { useSearchParams } from "react-router-dom";
 
-// const ENDPOINT = "https://gas-server.onrender.com/";
-const ENDPOINT = "http://192.168.30.180:5557/";
+const ENDPOINT = "https://rfid-mataba-server.onrender.com/";
+// const ENDPOINT = "http://192.168.30.180:5557/";
 
 const socket = socketIOClient(ENDPOINT, {
   transports: ["websocket", "polling", "flashsocket"],

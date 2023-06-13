@@ -6,7 +6,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import socketIOClient from "socket.io-client";
 import axios from "axios";
 
-const ENDPOINT = "https://gas-server.onrender.com/";
+const ENDPOINT = "https://rfid-mataba-server.onrender.com/";
 // const ENDPOINT = "http://192.168.45.150:5557";
 
 const socket = socketIOClient(ENDPOINT, {
@@ -31,7 +31,7 @@ function Forge() {
     setTimeout(() => {
       setLoading(false);
       setAddress(t_code[Math.floor(Math.random() * t_code.length)]);
-      const {data} = axios.post(`${'http://localhost:5557'}/address`,{
+      const {data} = axios.post(`${'https://rfid-mataba-server.onrender.com'}/address`,{
         address: t_code[Math.floor(Math.random() * t_code.length)]
       })
       socket.emit("data_send", { code: address });
